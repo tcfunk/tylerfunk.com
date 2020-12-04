@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&family=Quattrocento:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grid-item {
+  float: left;
+  height: 100px;
+  width: 20%;
+}
