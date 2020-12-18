@@ -1,5 +1,10 @@
 import * as React from "react"
 import Layout from '../layouts/layout'
+// import Img from 'gatsby-image'
+
+import roveyGif from '../images/thumbs/rovey.gif';
+
+
 
 const filters = [
   {
@@ -19,8 +24,16 @@ const filters = [
   },
 ];
 
+
 const posts = [
-  {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},
+  {
+    "title": "Rovey",
+    "cover": roveyGif
+  },
+  {
+    "title": "Battle Axe",
+    "cover": "",
+  }, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},
 ];
 
 // markup
@@ -29,15 +42,22 @@ const IndexPage = () => {
     <Layout>
       <main className="bg-yellow-100">
         <section className="p-4">
-          <ul className="flex">
+          <ul className="flex justify-center">
             {filters.map((filter) => 
-              <li className="flex-auto text-center">{filter.name}</li>
+              <li className="flex-initial text-center px-4">{filter.name}</li>
             )}
           </ul>
         </section>
         <section className="flex flex-wrap">
           {posts.map((post) =>
-            <article className="flex-grow-1 flex-shrink-0 w-1/3 p-4 bg-pink-100">Post</article>
+            <article
+              className="flex-grow-1 flex-shrink-0 w-1/4 h-1/4 p-4 bg-pink-100"
+            >
+                <figure>
+                  <img src={roveyGif}></img>
+                  <figcaption>{post.title}</figcaption>
+                </figure>
+              </article>
           )}
         </section>
       </main>

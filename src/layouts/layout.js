@@ -11,8 +11,8 @@ const icon = "h-6 w-6 text-white";
 
 export default function Layout({ children }) {
   return (
-    <div className="pl-64 text-gray-800">
-      <header className="fixed left-0 top-0 w-64 min-h-screen flex flex-row items-center justify-center text-center font-sans bg-green-100">
+    <div className="pl-64 text-white">
+      <header className="fixed left-0 top-0 w-64 min-h-screen flex flex-row items-center justify-center text-center font-sans bg-gray-800">
         <div className="flex flex-col space-y-8">
     
           <div>
