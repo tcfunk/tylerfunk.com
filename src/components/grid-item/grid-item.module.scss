@@ -1,0 +1,15 @@
+.gridItem {
+  width: 25%;
+  flex: 0 1 auto;
+  padding: 5px;
+  box-sizing: border-box;
+
+  &:nth-child(6n-2) {
+    width: 50%;
+    margin-top: -25%;
+  }
+
+  &:nth-child(6n-3) {
+    width: 50%;
+  }
+}

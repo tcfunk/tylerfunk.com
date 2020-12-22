@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&family=Quattrocento:wght@400;700&display=swap');
 
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-.grid-item {
+/* .grid-item {
   float: left;
   height: 100px;
   width: 20%;
+} */
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: darkslategrey;
 }

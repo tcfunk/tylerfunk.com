@@ -5,9 +5,9 @@ import Layout from '../layouts/layout'
 const IndexPage = () => {
   return (
     <Layout>
-    <main>
-      contact me
-    </main>
+      <main>
+        contact me
+      </main>
     </Layout>
   )
 }

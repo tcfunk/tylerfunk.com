@@ -1,5 +1,8 @@
+const path = require('path')
+
 module.exports = {
   plugins: [
+    "gatsby-plugin-sass",
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
@@ -11,9 +14,9 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: path.join(__dirname, 'src', 'portfolio')
       },
-      __key: "images",
+      __key: "portfolio",
     },
     {
       resolve: "gatsby-source-filesystem",

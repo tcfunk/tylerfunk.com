@@ -1,8 +1,9 @@
 import * as React from "react"
-import Layout from '../layouts/layout'
-// import Img from 'gatsby-image'
+import Img from "gatsby-image"
+import { graphql } from "gatsby";
 
-import roveyGif from '../images/thumbs/rovey.gif';
+import Layout from '../layouts/layout'
+import GridItem from '../components/grid-item'
 
 
 
@@ -25,19 +26,7 @@ const filters = [
 ];
 
 
-const posts = [
-  {
-    "title": "Rovey",
-    "cover": roveyGif
-  },
-  {
-    "title": "Battle Axe",
-    "cover": "",
-  }, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},
-];
-
-// markup
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
     <Layout>
       <main className="bg-yellow-100">
@@ -48,21 +37,40 @@ const IndexPage = () => {
             )}
           </ul>
         </section>
+
         <section className="flex flex-wrap">
-          {posts.map((post) =>
-            <article
-              className="flex-grow-1 flex-shrink-0 w-1/4 h-1/4 p-4 bg-pink-100"
-            >
-                <figure>
-                  <img src={roveyGif}></img>
-                  <figcaption>{post.title}</figcaption>
-                </figure>
-              </article>
+          {data.allFile.group.map((group) =>
+            <GridItem>
+              {group.nodes.map((post) =>
+                  <Img fluid={post.childImageSharp.fluid} />
+              )}
+            </GridItem>
           )}
         </section>
+
       </main>
     </Layout>
   )
 }
+
+export const query = graphql`
+query {
+  allFile(filter: {relativeDirectory: {ne: ""}}) {
+    group(field: relativeDirectory) {
+      fieldValue
+      totalCount
+      nodes {
+        absolutePath
+        relativeDirectory
+        childImageSharp {
+          fluid (maxWidth: 1200, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+}
+`
 
 export default IndexPage
