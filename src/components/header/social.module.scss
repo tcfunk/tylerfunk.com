@@ -1,0 +1,34 @@
+.social-icons {
+  display: flex;
+  justify-content: center;
+
+  &__link {
+    flex: 0;
+    display: flex;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0 0.25rem;
+
+    &--instagram:hover {
+      --tw-gradient-from: #8b5cf6;
+      --tw-gradient-to: #f59e0b;
+      --tw-gradient-stops: var(--tw-gradient-from), #ec4899, var(--tw-gradient-to, rgba(236, 72, 153, 0));
+      background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+    }
+    &--twitter:hover {
+      background-color: #55acee;
+    }
+    &--itch:hover {
+      background-color: #FE2348;
+    }
+    &--twitch:hover {
+      background-color: #9146FF;
+    }
+  }
+
+  &__icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: white;
+  }
+}

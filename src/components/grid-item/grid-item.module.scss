@@ -1,8 +1,7 @@
-.gridItem {
+.grid-item {
   width: 25%;
   flex: 0 1 auto;
   padding: 5px;
-  box-sizing: border-box;
 
   &:nth-child(6n-2) {
     width: 50%;
@@ -11,5 +10,19 @@
 
   &:nth-child(6n-3) {
     width: 50%;
+  }
+
+  &__container {
+    overflow: hidden;
+    height: auto;
+  }
+
+  &__link {
+    display: block;
+    transition: transform 333ms ease 0ms;
+
+    &:hover {
+      transform: scale(1.2) translate(0%, 0%)
+    }
   }
 }

@@ -1,10 +1,11 @@
 import * as React from "react"
 import Img from "gatsby-image"
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 import Layout from '../layouts/layout'
-import GridItem from '../components/grid-item'
+import GridItem from '../components/grid-item/grid-item'
 
+import styles from './portfolio.module.scss';
 
 
 const filters = [
@@ -30,19 +31,19 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <main className="bg-yellow-100">
-        <section className="p-4">
-          <ul className="flex justify-center">
+        <section className={styles.portfolioFilters}>
+          <ul className={styles.portfolioFilters__list}>
             {filters.map((filter) => 
               <li className="flex-initial text-center px-4">{filter.name}</li>
             )}
           </ul>
         </section>
 
-        <section className="flex flex-wrap">
+        <section className={styles.portfolioGrid}>
           {data.allFile.group.map((group) =>
             <GridItem>
               {group.nodes.map((post) =>
-                  <Img fluid={post.childImageSharp.fluid} />
+                <Img fluid={post.childImageSharp.fluid} />
               )}
             </GridItem>
           )}

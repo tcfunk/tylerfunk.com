@@ -1,0 +1,13 @@
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-filters {
+  padding: 1rem;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+}

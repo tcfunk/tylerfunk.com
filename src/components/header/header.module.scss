@@ -1,0 +1,17 @@
+.site-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 16rem;
+  height: 100vh;
+  
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  text-align: center;
+
+  // font-sans
+
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+}
