@@ -30,14 +30,15 @@ const filters = [
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <main className="bg-yellow-100">
-        <section className={styles.portfolioFilters}>
+      <main>
+
+        {/* <section className={styles.portfolioFilters}>
           <ul className={styles.portfolioFilters__list}>
             {filters.map((filter) => 
               <li className="flex-initial text-center px-4">{filter.name}</li>
             )}
           </ul>
-        </section>
+        </section> */}
 
         <section className={styles.portfolioGrid}>
           {data.allFile.group.map((group) =>

@@ -2,7 +2,7 @@ import React from "react";
 
 
 import SiteHeader from "../components/header/header"
-// import '../pages/index.css';
+import '../pages/index.css';
 import layoutClasses from './layout.module.scss';
 
 
