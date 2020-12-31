@@ -1,6 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
+
+
+const Article = styled.div.attrs({
+  className: "font-serif shadow m-4 rounded-sm p-4 max-w-xl mx-auto"
+})``
 
 export default function Template({
   data
@@ -14,8 +20,10 @@ export default function Template({
         <title>{frontmatter.title}</title>
         <meta name="description" contents={frontmatter.description}></meta>
       </Helmet>
-      <h1>{frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{__html: html}}></div>
+      <Article>
+        <h1>{frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{__html: html}}></div>
+      </Article>
     </div>
   )
 }

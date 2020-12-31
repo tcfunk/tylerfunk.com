@@ -11,13 +11,12 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <main>
-
         <section className={styles.portfolioGrid}>
-          {data.allFile.group.map((group) =>
+          {data.allMarkdownRemark.nodes.map((node) =>
             <GridItem>
-              {group.nodes.map((post) =>
-                <Img fluid={post.childImageSharp?.fluid} />
-              )}
+              <Link to={node.frontmatter.slug}>
+                <Img fluid={node.frontmatter.coverImage.childImageSharp.fluid} />
+              </Link>
             </GridItem>
           )}
         </section>
@@ -29,16 +28,17 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
 query {
-  allFile(filter: {relativeDirectory: {ne: ""}}) {
-    group(field: relativeDirectory) {
-      fieldValue
-      totalCount
-      nodes {
-        absolutePath
-        relativeDirectory
-        childImageSharp {
-          fluid (maxWidth: 1200, quality: 100) {
-            ...GatsbyImageSharpFluid
+  allMarkdownRemark {
+    nodes {
+      frontmatter {
+        slug
+        title
+        description
+        coverImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }
