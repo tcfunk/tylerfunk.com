@@ -13,10 +13,18 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: path.join(__dirname, 'src', 'portfolio')
+        name: "posts",
+        path: path.join(__dirname, 'src', 'posts')
       },
-      __key: "portfolio",
+      __key: "posts",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: path.join(__dirname, 'src', 'images')
+      },
+      __key: "images",
     },
     {
       resolve: "gatsby-source-filesystem",
@@ -26,5 +34,6 @@ module.exports = {
       },
       __key: "pages",
     },
+    "gatsby-transformer-remark",
   ],
 };

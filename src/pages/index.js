@@ -7,44 +7,16 @@ import GridItem from '../components/grid-item/grid-item'
 
 import styles from './portfolio.module.scss';
 
-
-const filters = [
-  {
-    key: 0,
-    tag: 'game-asset',
-    name: 'Game Assets'
-  },
-  {
-    key: 1,
-    tag: 'vfx',
-    name: 'Visual Effects'
-  },
-  {
-    key: 2,
-    tag: 'game',
-    name: 'Games'
-  },
-];
-
-
 const IndexPage = ({ data }) => {
   return (
     <Layout>
       <main>
 
-        {/* <section className={styles.portfolioFilters}>
-          <ul className={styles.portfolioFilters__list}>
-            {filters.map((filter) => 
-              <li className="flex-initial text-center px-4">{filter.name}</li>
-            )}
-          </ul>
-        </section> */}
-
         <section className={styles.portfolioGrid}>
           {data.allFile.group.map((group) =>
             <GridItem>
               {group.nodes.map((post) =>
-                <Img fluid={post.childImageSharp.fluid} />
+                <Img fluid={post.childImageSharp?.fluid} />
               )}
             </GridItem>
           )}
