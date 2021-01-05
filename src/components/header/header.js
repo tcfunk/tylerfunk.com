@@ -1,17 +1,15 @@
 import React from "react"
 import { Link } from "gatsby";
-import { SiArtstation, SiTwitter, SiInstagram, SiTwitch, SiItchDotIo } from 'react-icons/si';
+import { SiArtstation,  SiInstagram, SiTwitch } from 'react-icons/si';
 import styled from 'styled-components'
 
 import headerCSS from './header.module.scss'
-import socialCSS from './social.module.scss'
 
 const SocialLink = styled.a.attrs({
   className: "flex rounded-lg p-2 my-0 mx-2 bg-gradient-to-tr from-white via-white to-white text-gray-700"
 })``
 
 const SocialLinkInstagram = "hover:to-yellow-500 hover:from-purple-500 hover:via-pink-500 hover:text-white"
-const SocialLinkTwitter = "hover:to-twitter hover:from-twitter hover:text-white"
 const SocialLinkArtstation = "hover:to-gray-700 hover:from-gray-700 hover:text-artstation"
 const SocialLinkTwitch = "hover:from-twitch hover:to-twitch hover:text-white"
 const SocialIcon = "h-6 w-6"

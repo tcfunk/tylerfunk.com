@@ -20,7 +20,7 @@ export default function Template({
   var artstationEmbed = "";
   if (frontmatter.artstationId) {
     artstationEmbed = (
-      <iframe width="640" height="360" src={"https://www.artstation.com/embed/"+ frontmatter.artstationId} frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" scrolling="no"></iframe>
+      <iframe title="Marmoset Viewer" width="640" height="360" src={"https://www.artstation.com/embed/"+ frontmatter.artstationId} frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" scrolling="no"></iframe>
     )
   }
 
