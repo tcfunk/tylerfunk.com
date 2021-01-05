@@ -17,6 +17,13 @@ export default function Template({
   const { markdownRemark } = data
   const { html, frontmatter } = markdownRemark
 
+  var artstationEmbed = "";
+  if (frontmatter.artstationId) {
+    artstationEmbed = (
+      <iframe width="640" height="360" src={"https://www.artstation.com/embed/"+ frontmatter.artstationId} frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" scrolling="no"></iframe>
+    )
+  }
+
   return (
     <Layout>
       <Helmet>
@@ -29,6 +36,8 @@ export default function Template({
         {frontmatter.images.map((image) =>
           <Img fluid={image.childImageSharp.fluid} />
         )}
+
+        {artstationEmbed}
 
         <div dangerouslySetInnerHTML={{__html: html}}></div>
       </Article>
@@ -44,6 +53,7 @@ query($slug: String!) {
       slug
       title
       description
+      artstationId
       coverImage {
         childImageSharp {
           fluid {
