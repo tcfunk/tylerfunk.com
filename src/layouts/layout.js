@@ -15,7 +15,7 @@ export default function Layout({ children }) {
 
       {children}
 
-      <footer className="flex flex-row text-center justify-center py-4 bg-blue-100">
+      <footer className="flex flex-row text-center justify-center my-4 py-4 bg-blue-100">
         <div>
           footer things
         </div>

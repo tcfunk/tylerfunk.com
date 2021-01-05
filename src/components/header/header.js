@@ -1,9 +1,20 @@
 import React from "react"
 import { Link } from "gatsby";
-import { SiTwitter, SiInstagram, SiTwitch, SiItchDotIo } from 'react-icons/si';
+import { SiArtstation, SiTwitter, SiInstagram, SiTwitch, SiItchDotIo } from 'react-icons/si';
+import styled from 'styled-components'
 
 import headerCSS from './header.module.scss'
 import socialCSS from './social.module.scss'
+
+const SocialLink = styled.a.attrs({
+  className: "flex rounded-lg p-2 my-0 mx-2 bg-gradient-to-tr from-white via-white to-white text-gray-700"
+})``
+
+const SocialLinkInstagram = "hover:to-yellow-500 hover:from-purple-500 hover:via-pink-500 hover:text-white"
+const SocialLinkTwitter = "hover:to-twitter hover:from-twitter hover:text-white"
+const SocialLinkArtstation = "hover:to-gray-700 hover:from-gray-700 hover:text-artstation"
+const SocialLinkTwitch = "hover:from-twitch hover:to-twitch hover:text-white"
+const SocialIcon = "h-6 w-6"
 
 class Header extends React.Component {
   render() {
@@ -22,30 +33,18 @@ class Header extends React.Component {
             <li className={headerCSS.siteHeader__listItem}><Link to="/make-contact">Contact</Link></li>
           </ul>
 
-          <section className={socialCSS.socialIcons}>
-            <a
-              className={`${socialCSS.socialIcons__link} ${socialCSS.socialIcons__linkInstagram}`}
-              href="https://www.instagram.com/tcfunk25/">
-              <SiInstagram className={socialCSS.socialIcons__icon} />
-            </a>
+          <section className="flex justify-center">
+            <SocialLink className={[SocialLink, SocialLinkInstagram].join(' ')} href="https://www.instagram.com/tcfunk25/" target="_blank">
+              <SiInstagram className={SocialIcon} />
+            </SocialLink>
 
-            <a
-              className={`${socialCSS.socialIcons__link} ${socialCSS.socialIcons__linkTwitter}`}
-              href="https://twitter.com/tcfunk">
-                <SiTwitter className={socialCSS.socialIcons__icon} />
-            </a>
+            <SocialLink className={[SocialLink, SocialLinkArtstation].join(' ')} href="https://artstation.com/tcfunk/" target="_blank">
+              <SiArtstation className={SocialIcon} />
+            </SocialLink>
 
-            <a
-              className={`${socialCSS.socialIcons__link} ${socialCSS.socialIcons__linkItch}`}
-              href="https://tfunk.itch.io/">
-                <SiItchDotIo className={socialCSS.socialIcons__icon} />
-            </a>
-
-            <a
-              className={`${socialCSS.socialIcons__link} ${socialCSS.socialIcons__linkTwitch}`}
-              href="https://www.twitch.tv/tyfoo">
-                <SiTwitch className={socialCSS.socialIcons__icon} />
-            </a>
+            <SocialLink className={[SocialLink, SocialLinkTwitch].join(' ')} href="https://twitch.com/tyfoo/" target="_blank">
+              <SiTwitch className={SocialIcon} />
+            </SocialLink>
           </section>
 
         </div>

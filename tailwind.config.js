@@ -7,6 +7,9 @@ module.exports = {
       'serif': ['Quattrocento']
     },
     extend: {
+      boxShadow: {
+        neumorph: '20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;'
+      },
       colors: {
         itch: {
           DEFAULT: '#FE2348'
@@ -16,12 +19,17 @@ module.exports = {
         },
         twitter: {
           DEFAULT: '#55acee'
+        },
+        artstation: {
+          DEFAULT: '#13aff0'
         }
       }
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      visibility: ['hover']
+    },
   },
   plugins: [],
 }
