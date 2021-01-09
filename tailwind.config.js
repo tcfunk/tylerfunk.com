@@ -3,8 +3,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'sans': ['Oswald'],
-      'serif': ['Quattrocento']
+      'sans': ['Overpass'],
+      'serif': ['Permanent Marker']
     },
     extend: {
       boxShadow: {

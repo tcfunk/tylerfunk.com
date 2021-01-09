@@ -1,9 +1,9 @@
 import React from "react"
-import { Link } from "gatsby";
-import { SiArtstation,  SiInstagram, SiTwitch } from 'react-icons/si';
+import { Link } from "gatsby"
+import { SiArtstation,  SiInstagram, SiTwitch } from 'react-icons/si'
+import { HiOutlineMenuAlt3 } from 'react-icons/hi'
 import styled from 'styled-components'
 
-import headerCSS from './header.module.scss'
 
 const SocialLink = styled.a.attrs({
   className: "flex rounded-lg p-2 my-0 mx-2 bg-gradient-to-tr from-white via-white to-white text-gray-700"
@@ -14,21 +14,48 @@ const SocialLinkArtstation = "hover:to-gray-700 hover:from-gray-700 hover:text-a
 const SocialLinkTwitch = "hover:from-twitch hover:to-twitch hover:text-white"
 const SocialIcon = "h-6 w-6"
 
+const NavWrapper = styled.section.attrs({
+  className: "container mx-auto py-2 flex flex-row-reverse"
+})``
+const HeaderMenuIcon = "text-gray-200 h-8 w-8"
+
+const TitleWrapper = styled.section.attrs({
+  className: "w-full relative"
+})``
+const TitleContainer = styled.section.attrs({
+  className: "container mx-auto py-2 relative z-10"
+})``
+const TitleBackdrop = styled.div.attrs({
+  className: "h-full w-2/3 bg-gray-700 absolute left-0 top-0 z-0"
+})``
+
+const NameTitle = styled.h1.attrs({
+  className: "font-serif text-7xl text-yellow-300"
+})``
+const NameSubtitle = styled.h2.attrs({
+  className: "font-serif text-4xl text-yellow-300"
+})``
+
 class Header extends React.Component {
   render() {
     return (
-      <header className={headerCSS.siteHeader}>
-        <div className={headerCSS.siteHeader__container}>
-    
-          <div>
-            <h1 className={headerCSS.siteHeader__title}>Tyler Funk</h1>
-            <h2 className={headerCSS.siteHeader__subtitle}>Game Developer / 3D Artist</h2>
-          </div>
+      <header>
+        <div>
 
-          <ul className={headerCSS.siteHeader__list}>
-            <li className={headerCSS.siteHeader__listItem}><Link to="/">Portfolio</Link></li>
-            <li className={headerCSS.siteHeader__listItem}><Link to="/about">About</Link></li>
-            <li className={headerCSS.siteHeader__listItem}><Link to="/make-contact">Contact</Link></li>
+          <NavWrapper><HiOutlineMenuAlt3 className={HeaderMenuIcon}/></NavWrapper>
+    
+          <TitleWrapper>
+            <TitleContainer>
+              <NameTitle>Tyler Funk</NameTitle>
+              <NameSubtitle>Game Developer / 3D Artist</NameSubtitle>
+            </TitleContainer>
+            <TitleBackdrop />
+          </TitleWrapper>
+
+          <ul>
+            <li><Link to="/">Portfolio</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/make-contact">Contact</Link></li>
           </ul>
 
           <section className="flex justify-center">

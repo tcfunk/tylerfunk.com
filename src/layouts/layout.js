@@ -1,4 +1,5 @@
 import React from "react";
+import styled from 'styled-components'
 
 
 import SiteHeader from "../components/header/header"
@@ -6,10 +7,16 @@ import '../pages/index.css';
 import layoutClasses from './layout.module.scss';
 
 
+const Wrapper = styled.div.attrs({
+  className: "w-full bg-gray-800"
+})``
+
+// 393E46
+// 34, 40, 49
 
 export default function Layout({ children }) {
   return (
-    <div className={layoutClasses.layoutContainer}>
+    <Wrapper>
 
       <SiteHeader />
 
@@ -20,6 +27,6 @@ export default function Layout({ children }) {
           footer things
         </div>
       </footer>
-    </div>
+    </Wrapper>
   )
 }

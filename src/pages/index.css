@@ -1,17 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&family=Quattrocento:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,200;0,400;0,800;1,400&family=Permanent+Marker&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* .grid-item {
-  float: left;
-  height: 100px;
-  width: 20%;
-} */
-
-/* .flex {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: darkslategrey;
+/* body {
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
 } */
