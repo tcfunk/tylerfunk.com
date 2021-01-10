@@ -13,9 +13,12 @@ const IndexPage = ({ data }) => {
       <main>
         <section className={styles.portfolioGrid}>
           {data.allMarkdownRemark.nodes.map((node) =>
-            <GridItem to={node.frontmatter.slug} title={node.frontmatter.title}>
-              <Img fluid={node.frontmatter.coverImage.childImageSharp.fluid} />
-            </GridItem>
+
+            <GridItem
+              to={node.frontmatter.slug}
+              title={node.frontmatter.title}
+              description={node.excerpt}
+              image={node.frontmatter.coverImage.childImageSharp.fluid} />
           )}
         </section>
 
@@ -28,10 +31,10 @@ export const query = graphql`
 query {
   allMarkdownRemark (sort: {fields: fileAbsolutePath}) {
     nodes {
+      excerpt
       frontmatter {
         slug
         title
-        description
         coverImage {
           childImageSharp {
             fluid {

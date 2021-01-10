@@ -1,44 +1,100 @@
 import React from "react";
+import Img from "gatsby-image"
 import { Link } from "gatsby";
 import styled from 'styled-components'
 
-const Article = styled.article.attrs({
-  className: "w-1/4 flex-initial p-4"
-})``
+const Post = styled.article.attrs({
+  className: `
+    container
+    mx-auto
+    flex
+    flex-row
+    -mt-12
 
-const ItemContainer = styled.div.attrs({
-  className: "truncate h-auto rounded shadow-xl relative"
-})``
-
-const Overlay = styled.div.attrs({
-  className: "opacity-0 hover:opacity-90 w-full absolute text-gray-700 inset-0 bg-green-400 transition-opacity duration-300 ease-in",
-})``
-
-const OverlayText = styled.div.attrs({
-  className: "flex justify-center items-center h-full w-full text-white uppercase",
+    even:flex-row-reverse
+    even:w-5/7
+  `
 })`
-&:before {
-  content: '_'
-}`
+.post-card {
+  margin-left: -3rem;
+}
+&:nth-child(1) {
+  margin-top: 0;
+}
+&:nth-child(2n) .post-card {
+  margin-left: 0;
+  margin-right: -3rem;
+}
+&:nth-child(2n) .post-card-link {
+  left: initial;
+  right: 3rem;
+}
+`
 
-const linkClasses = "block duration-300 transition-transform ease-in transform scale-100 hover:scale-125";
+const PostImage = styled.div.attrs({
+  className: `
+    relative
+    flex-3/2
+    z-0
+  `
+})``
+
+const PostCardWrapper = styled.div.attrs({
+  className: `
+    flex
+    flex-1
+    flex-col
+    justify-center
+  `
+})``
+const PostCard = styled.div.attrs({
+  className: `
+    bg-gray-700
+    text-gray-100
+    post-card
+    relative
+    p-12
+    z-10
+  `
+})``
+const PostCardTitle = styled.h2.attrs({
+  className: `
+    font-serif
+    text-4xl
+    text-yellow-300
+    mb-8
+  `
+})``
+const PostCardLink = `
+  absolute
+  post-card-link
+  bg-yellow-300
+  font-serif
+  text-5xl
+  text-gray-800
+  leading-zero
+  px-6
+  pt-6
+  pb-8
+  -bottom-7
+  left-12
+`
 
 class GridItem extends React.Component {
   render() {
     return (
-      <Article>
-        <ItemContainer>
-          <Link to={this.props.to} className={linkClasses}>
-            {this.props.children}
-          </Link>
-
-          <Overlay>
-            <OverlayText>
-              {this.props.title}
-            </OverlayText>
-          </Overlay>
-        </ItemContainer>
-      </Article>
+      <Post>
+        <PostImage>
+          <Img fluid={this.props.image} />
+        </PostImage>
+        <PostCardWrapper>
+          <PostCard>
+            <PostCardTitle>{this.props.title}</PostCardTitle>
+            <p dangerouslySetInnerHTML={{__html: this.props.description}}></p>
+            <Link to={this.props.to} className={PostCardLink}>-></Link>
+          </PostCard>
+        </PostCardWrapper>
+      </Post>
     )
   }
 }

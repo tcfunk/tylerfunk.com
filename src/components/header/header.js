@@ -20,7 +20,7 @@ const NavWrapper = styled.section.attrs({
 const HeaderMenuIcon = "text-gray-200 h-8 w-8"
 
 const TitleWrapper = styled.section.attrs({
-  className: "w-full relative"
+  className: "w-full relative mb-16"
 })``
 const TitleContainer = styled.section.attrs({
   className: "container mx-auto py-2 relative z-10"
@@ -52,13 +52,13 @@ class Header extends React.Component {
             <TitleBackdrop />
           </TitleWrapper>
 
-          <ul>
+          {/* <ul>
             <li><Link to="/">Portfolio</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/make-contact">Contact</Link></li>
-          </ul>
+          </ul> */}
 
-          <section className="flex justify-center">
+          {/* <section className="flex justify-center">
             <SocialLink className={[SocialLink, SocialLinkInstagram].join(' ')} href="https://www.instagram.com/tcfunk25/" target="_blank">
               <SiInstagram className={SocialIcon} />
             </SocialLink>
@@ -70,7 +70,7 @@ class Header extends React.Component {
             <SocialLink className={[SocialLink, SocialLinkTwitch].join(' ')} href="https://twitch.com/tyfoo/" target="_blank">
               <SiTwitch className={SocialIcon} />
             </SocialLink>
-          </section>
+          </section> */}
 
         </div>
       </header>

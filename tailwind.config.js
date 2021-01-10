@@ -23,12 +23,29 @@ module.exports = {
         artstation: {
           DEFAULT: '#13aff0'
         }
+      },
+      flex: {
+        '3/2': '1.5 1.5 auto',
+        '2': '2 2 auto',
+      },
+      lineHeight: {
+        'zero': '0',
+      },
+      width: {
+        '1/7': '14.2857143%',
+        '2/7': '28.5714286%',
+        '3/7': '42.8571429%',
+        '4/7': '57.1428571%',
+        '5/7': '71.4285714%',
+        '6/7': '85.7142857%',
       }
     },
   },
   variants: {
     extend: {
-      visibility: ['hover']
+      flexDirection: ['odd', 'even'],
+      visibility: ['hover'],
+      width: ['odd', 'even']
     },
   },
   plugins: [],

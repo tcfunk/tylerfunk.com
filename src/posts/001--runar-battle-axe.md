@@ -8,6 +8,4 @@ images:
   - ../images/runar-battle-axe--iray-2.jpg
 ---
 
-No one:
-
-Me: And my axe!
+Game-ready axe model created and retopologized in Blender, textured in Substance Painter. Shown here rendered with iRay.
