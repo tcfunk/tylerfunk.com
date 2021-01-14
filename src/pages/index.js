@@ -37,7 +37,7 @@ query {
         title
         coverImage {
           childImageSharp {
-            fluid {
+            fluid (quality: 90) {
               ...GatsbyImageSharpFluid
             }
           }

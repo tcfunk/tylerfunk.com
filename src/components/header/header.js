@@ -15,7 +15,7 @@ const SocialLinkTwitch = "hover:from-twitch hover:to-twitch hover:text-white"
 const SocialIcon = "h-6 w-6"
 
 const NavWrapper = styled.section.attrs({
-  className: "container mx-auto py-2 flex flex-row-reverse"
+  className: "container px-16 mx-auto py-2 flex flex-row-reverse"
 })``
 const HeaderMenuIcon = "text-gray-200 h-8 w-8"
 
@@ -23,7 +23,7 @@ const TitleWrapper = styled.section.attrs({
   className: "w-full relative mb-16"
 })``
 const TitleContainer = styled.section.attrs({
-  className: "container mx-auto py-2 relative z-10"
+  className: "container px-16 mx-auto py-2 relative z-10"
 })``
 const TitleBackdrop = styled.div.attrs({
   className: "h-full w-2/3 bg-gray-700 absolute left-0 top-0 z-0"

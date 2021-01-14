@@ -6,6 +6,7 @@ import styled from 'styled-components'
 const Post = styled.article.attrs({
   className: `
     container
+    px-16
     mx-auto
     flex
     flex-row
@@ -83,6 +84,9 @@ const PostCardLink = `
   ease-out
   hover:scale-110
 `
+const PostCardDescription = styled.p.attrs({
+  className: "mb-6"
+})``
 
 class GridItem extends React.Component {
   render() {
@@ -94,8 +98,8 @@ class GridItem extends React.Component {
         <PostCardWrapper>
           <PostCard>
             <PostCardTitle>{this.props.title}</PostCardTitle>
-            <p dangerouslySetInnerHTML={{__html: this.props.description}}></p>
-            <Link to={this.props.to} className={PostCardLink}>-></Link>
+            <PostCardDescription dangerouslySetInnerHTML={{__html: this.props.description}}></PostCardDescription>
+            <Link to={this.props.to} className={PostCardLink}>-&gt;</Link>
           </PostCard>
         </PostCardWrapper>
       </Post>
