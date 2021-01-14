@@ -78,6 +78,10 @@ const PostCardLink = `
   pb-8
   -bottom-7
   left-12
+  transition-transform
+  transform
+  ease-out
+  hover:scale-110
 `
 
 class GridItem extends React.Component {
