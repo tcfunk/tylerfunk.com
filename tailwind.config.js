@@ -6,6 +6,15 @@ module.exports = {
       'sans': ['Overpass'],
       'serif': ['Permanent Marker']
     },
+    container: {
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      },
+    },
     extend: {
       boxShadow: {
         neumorph: '20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;'

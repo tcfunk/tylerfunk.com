@@ -10,14 +10,17 @@ import styles from './portfolio.module.scss';
 
 const PortfolioGrid = styled.div.attrs({
   className: `
-    grid
-    grid-cols-1
-    gap-12
     container
     mx-auto
-    lg:grid-cols-4
-    md:grid-cols-3
+    grid
+    grid-cols-1
+    gap-4
+    md:gap-6
+    lg:gap-8
+    xl:gap-12
     sm:grid-cols-2
+    md:grid-cols-3
+    lg:grid-cols-4
   `
 })``
 
