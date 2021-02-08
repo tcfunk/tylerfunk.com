@@ -3,6 +3,7 @@ import Img from "gatsby-image"
 import { Link } from "gatsby";
 import styled from 'styled-components'
 
+/*
 const Post = styled.article.attrs({
   className: `
     container
@@ -86,6 +87,33 @@ const PostCardLink = `
 `
 const PostCardDescription = styled.p.attrs({
   className: "mb-6"
+})``
+*/
+
+const Post = styled.div.attrs({
+  className: `
+  `
+})``
+
+const PostImage = styled.div.attrs({
+  className: ''
+})``
+
+const PostCardWrapper = styled.div.attrs({
+  className: ''
+})``
+
+const PostCard = styled.div.attrs({
+  className: ''
+})``
+const PostCardLink = styled.div.attrs({
+  className: ''
+})``
+const PostCardTitle = styled.div.attrs({
+  className: ''
+})``
+const PostCardDescription = styled.div.attrs({
+  className: ''
 })``
 
 class GridItem extends React.Component {
