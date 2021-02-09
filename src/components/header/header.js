@@ -29,18 +29,41 @@ const NavList = styled.div.attrs({
   `
 })``
 
-const NavLink = `
-  text-gray-100
-  text-lg
-  px-4
+const NavLink = styled(Link).attrs({
+  className: `
+    text-gray-100
+    text-2xl
+    px-4
+    py-4
+    font-sans
+    xl:px-8
+    relative
+  `,
+  activeClassName: 'navlink_active'
+})`
+&.navlink_active {
+  ::after {
+    content: "_";
+    font-family: Permanent Marker;
+    font-size: 4rem;
+    color: rgba(252, 211, 77, 1);
+    position: absolute;
+    width: 100%;
+    bottom: 25%;
+    left: 0;
+    text-align: center;
+  }
+}
 `
+
 const HeaderMenuIcon = "text-gray-200 h-8 w-8"
 
 const TitleWrapper = styled.section.attrs({
   className: `
     w-full
     relative
-    mb-16
+    py-8
+    xl:py-16
   `
 })``
 const TitleContainer = styled.section.attrs({
@@ -92,9 +115,9 @@ class Header extends React.Component {
             {/* <HiOutlineMenuAlt3 className={HeaderMenuIcon}/> */}
 
             <NavList>
-              <Link className={NavLink} to="/">Home</Link>
-              <Link className={NavLink} to="/about">About</Link>
-              <Link className={NavLink} to="/make-contact">Contact</Link>
+              <NavLink to="/">Home</NavLink>
+              <NavLink to="/about">About</NavLink>
+              <NavLink to="/make-contact">Contact</NavLink>
             </NavList>
           </NavWrapper>
 
