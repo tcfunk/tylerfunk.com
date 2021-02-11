@@ -4,12 +4,38 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
-import PostTitle from '../components/postTitle'
+import PostDetails from '../components/postDetails'
 import Layout from '../layouts/layout'
 
 const Article = styled.div.attrs({
-  className: "font-serif shadow m-4 rounded-sm p-4 max-w-xl mx-auto text-gray-800"
+  className: `
+    grid
+    gap-4
+    grid-cols-1
+    grid-rows-1
+    lg:container
+    lg:mx-auto
+    lg:grid-cols-3
+    lg:grid-rows-1
+  `
 })``
+
+const MediaList = styled.div.attrs({
+  className: `
+    col-start-1
+    col-span-1
+    container
+    lg:px-0
+    lg:col-span-2
+  `
+})``
+
+const MediaItem = styled(Img).attrs({
+  className: `
+    mb-4
+  `
+})``
+
 
 export default function Template({
   data
@@ -20,7 +46,7 @@ export default function Template({
   var artstationEmbed = "";
   if (frontmatter.artstationId) {
     artstationEmbed = (
-      <iframe title="Marmoset Viewer" width="640" height="360" src={"https://www.artstation.com/embed/"+ frontmatter.artstationId} frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" scrolling="no"></iframe>
+      <iframe title="Marmoset Viewer" style={{width: "100%"}} src={"https://www.artstation.com/embed/"+ frontmatter.artstationId} frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" scrolling="no"></iframe>
     )
   }
 
@@ -31,15 +57,17 @@ export default function Template({
         <meta name="description" contents={frontmatter.description}></meta>
       </Helmet>
       <Article>
-        <PostTitle>{frontmatter.title}</PostTitle>
+        <PostDetails
+          className="col-start-1 row-start-1 lg:col-start-3"
+          title={frontmatter.title}
+          description={html}></PostDetails>
 
-        {frontmatter.images.map((image) =>
-          <Img fluid={image.childImageSharp.fluid} />
-        )}
-
-        {artstationEmbed}
-
-        <div dangerouslySetInnerHTML={{__html: html}}></div>
+        <MediaList>
+          {frontmatter.images.map((image) =>
+            <MediaItem fluid={image.childImageSharp.fluid} />
+          )}
+          {/* {artstationEmbed} */}
+        </MediaList>
       </Article>
     </Layout>
   )

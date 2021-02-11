@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 import SiteHeader from "../components/header/header"
 import '../pages/index.css';
-import layoutClasses from './layout.module.scss';
 
 
 const Wrapper = styled.div.attrs({

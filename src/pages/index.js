@@ -1,12 +1,10 @@
 import * as React from "react"
-import Img from "gatsby-image"
 import { graphql } from "gatsby";
 
 import Layout from '../layouts/layout'
 import GridItem from '../components/grid-item/grid-item'
 import styled from 'styled-components'
 
-import styles from './portfolio.module.scss';
 
 const PortfolioGrid = styled.div.attrs({
   className: `
