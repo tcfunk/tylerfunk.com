@@ -1,8 +1,9 @@
 import React from "react";
 import styled from 'styled-components'
 
-
 import SiteHeader from "../components/header/header"
+import SiteFooter from "../components/footer"
+
 import '../pages/index.css';
 
 
@@ -21,11 +22,12 @@ export default function Layout({ children }) {
 
       {children}
 
-      <footer className="flex flex-row text-center justify-center my-4 py-4 bg-blue-100">
+      <SiteFooter />
+      {/* <footer className="flex flex-row text-center justify-center mt-4 py-4 bg-blue-100">
         <div>
           footer things
         </div>
-      </footer>
+      </footer> */}
     </Wrapper>
   )
 }
