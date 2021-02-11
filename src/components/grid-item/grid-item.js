@@ -6,28 +6,21 @@ import styled from 'styled-components'
 
 const Post = styled(Link).attrs({
   className: `
+    truncate
   `
 })``
 
 const PostImage = styled.div.attrs({
-  className: ''
+  className: `
+    block
+    duration-100
+    transform
+    transition-transform
+    ease-in
+    hover:scale-110
+  `
 })``
-
-const PostCardWrapper = styled.div.attrs({
-  className: ''
-})``
-
-const PostCard = styled.div.attrs({
-  className: ''
-})``
-
-const PostCardTitle = styled.div.attrs({
-  className: ''
-})``
-
-const PostCardDescription = styled.div.attrs({
-  className: ''
-})``
+// const linkClasses = "block duration-300 transition-transform ease-in transform scale-100 hover:scale-125";
 
 class GridItem extends React.Component {
   render() {
@@ -36,12 +29,6 @@ class GridItem extends React.Component {
         <PostImage>
           <Img fluid={this.props.image} />
         </PostImage>
-        <PostCardWrapper>
-          <PostCard>
-            <PostCardTitle>{this.props.title}</PostCardTitle>
-            <PostCardDescription dangerouslySetInnerHTML={{__html: this.props.description}}></PostCardDescription>
-          </PostCard>
-        </PostCardWrapper>
       </Post>
     )
   }
