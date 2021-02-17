@@ -68,7 +68,9 @@ export default function Template({
 
         <MediaList>
           {frontmatter.images.map((image) =>
-            <MediaItem fluid={image.childImageSharp.fluid} />
+            <div>
+              <MediaItem fluid={image.src.childImageSharp.fluid} />
+            </div>
           )}
           {/* {artstationEmbed} */}
         </MediaList>
@@ -94,9 +96,12 @@ query($slug: String!) {
         }
       }
       images {
-        childImageSharp {
-          fluid (quality: 90) {
-            ...GatsbyImageSharpFluid
+        label
+        src {
+          childImageSharp {
+            fluid (quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }
