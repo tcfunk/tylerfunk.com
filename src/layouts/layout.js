@@ -8,7 +8,7 @@ import '../pages/index.css';
 
 
 const Wrapper = styled.div.attrs({
-  className: "w-full bg-gray-800"
+  className: "w-full h-full bg-gray-700"
 })``
 
 // 393E46

@@ -88,7 +88,7 @@ const NameSubtitle = styled.h2.attrs({
 class Header extends React.Component {
   render() {
     return (
-      <header>
+      <header className="bg-gray-800">
         <div>
     
           <TitleWrapper>

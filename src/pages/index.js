@@ -30,22 +30,8 @@ const IndexPage = ({ data }) => {
         <title>Tyler Funk | Game Developer & 3D Artist</title>
         <meta name="description" contents="Game Development and 3D Art Portfolio"></meta>
       </Helmet>
-      <main>
+      <main className="bg-gray-800">
         <PortfolioGrid>
-          {data.allMarkdownRemark.nodes.map((node) =>
-            <GridItem
-              to={node.frontmatter.slug}
-              title={node.frontmatter.title}
-              description={node.excerpt}
-              image={node.frontmatter.coverImage.childImageSharp.fluid} />
-          )}
-          {data.allMarkdownRemark.nodes.map((node) =>
-            <GridItem
-              to={node.frontmatter.slug}
-              title={node.frontmatter.title}
-              description={node.excerpt}
-              image={node.frontmatter.coverImage.childImageSharp.fluid} />
-          )}
           {data.allMarkdownRemark.nodes.map((node) =>
             <GridItem
               to={node.frontmatter.slug}
