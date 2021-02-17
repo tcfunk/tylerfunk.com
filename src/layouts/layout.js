@@ -8,11 +8,8 @@ import '../pages/index.css';
 
 
 const Wrapper = styled.div.attrs({
-  className: "w-full h-full bg-gray-700"
+  className: "w-full h-full bg-gray-800"
 })``
-
-// 393E46
-// 34, 40, 49
 
 export default function Layout({ children }) {
   return (

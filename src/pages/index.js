@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => {
         <title>Tyler Funk | Game Developer & 3D Artist</title>
         <meta name="description" contents="Game Development and 3D Art Portfolio"></meta>
       </Helmet>
-      <main className="bg-gray-800">
+      <main>
         <PortfolioGrid>
           {data.allMarkdownRemark.nodes.map((node) =>
             <GridItem

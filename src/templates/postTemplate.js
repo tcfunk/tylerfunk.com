@@ -7,11 +7,6 @@ import Img from 'gatsby-image'
 import PostDetails from '../components/postDetails'
 import Layout from '../layouts/layout'
 
-const ArticleWrapper = styled.div.attrs({
-  className: `
-    bg-gray-800
-  `
-})``
 
 const Article = styled.div.attrs({
   className: `
@@ -64,21 +59,20 @@ export default function Template({
         <title>{frontmatter.title}</title>
         <meta name="description" contents={frontmatter.description}></meta>
       </Helmet>
-      <ArticleWrapper>
-        <Article>
-          <PostDetails
-            className="col-start-1 row-start-1 lg:col-start-3"
-            title={frontmatter.title}
-            description={html}></PostDetails>
 
-          <MediaList>
-            {frontmatter.images.map((image) =>
-              <MediaItem fluid={image.childImageSharp.fluid} />
-            )}
-            {/* {artstationEmbed} */}
-          </MediaList>
-        </Article>
-      </ArticleWrapper>
+      <Article>
+        <PostDetails
+          className="col-start-1 row-start-1 lg:col-start-3"
+          title={frontmatter.title}
+          description={html}></PostDetails>
+
+        <MediaList>
+          {frontmatter.images.map((image) =>
+            <MediaItem fluid={image.childImageSharp.fluid} />
+          )}
+          {/* {artstationEmbed} */}
+        </MediaList>
+      </Article>
     </Layout>
   )
 }
