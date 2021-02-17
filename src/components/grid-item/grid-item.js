@@ -6,13 +6,14 @@ import styled from 'styled-components'
 
 const Post = styled(Link).attrs({
   className: `
+    block
+    rounded
     truncate
   `
 })``
 
-const PostImage = styled.div.attrs({
+const PostImage = styled(Img).attrs({
   className: `
-    block
     duration-100
     transform
     transition-transform
@@ -20,15 +21,12 @@ const PostImage = styled.div.attrs({
     hover:scale-110
   `
 })``
-// const linkClasses = "block duration-300 transition-transform ease-in transform scale-100 hover:scale-125";
 
 class GridItem extends React.Component {
   render() {
     return (
       <Post to={this.props.to}>
-        <PostImage>
-          <Img fluid={this.props.image} />
-        </PostImage>
+        <PostImage fluid={this.props.image} />
       </Post>
     )
   }

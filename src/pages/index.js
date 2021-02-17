@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Helmet } from 'react-helmet'
 import { graphql } from "gatsby";
 
 import Layout from '../layouts/layout'
@@ -12,10 +13,10 @@ const PortfolioGrid = styled.div.attrs({
     mx-auto
     grid
     grid-cols-1
-    gap-6
-    py-6
-    lg:py-8
-    lg:gap-8
+    gap-8
+    py-8
+    lg:py-10
+    lg:gap-10
     sm:grid-cols-2
     md:grid-cols-3
     xl:grid-cols-4
@@ -25,6 +26,10 @@ const PortfolioGrid = styled.div.attrs({
 const IndexPage = ({ data }) => {
   return (
     <Layout>
+      <Helmet>
+        <title>Tyler Funk | Game Developer & 3D Artist</title>
+        <meta name="description" contents="Game Development and 3D Art Portfolio"></meta>
+      </Helmet>
       <main>
         <PortfolioGrid>
           {data.allMarkdownRemark.nodes.map((node) =>

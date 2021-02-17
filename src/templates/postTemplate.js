@@ -13,6 +13,8 @@ const Article = styled.div.attrs({
     gap-4
     grid-cols-1
     grid-rows-1
+    py-6
+    lg:py-8
     lg:container
     lg:mx-auto
     lg:grid-cols-3
@@ -91,7 +93,7 @@ query($slug: String!) {
       }
       images {
         childImageSharp {
-          fluid {
+          fluid (quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }

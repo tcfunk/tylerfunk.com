@@ -23,11 +23,7 @@ export default function Layout({ children }) {
       {children}
 
       <SiteFooter />
-      {/* <footer className="flex flex-row text-center justify-center mt-4 py-4 bg-blue-100">
-        <div>
-          footer things
-        </div>
-      </footer> */}
+
     </Wrapper>
   )
 }
