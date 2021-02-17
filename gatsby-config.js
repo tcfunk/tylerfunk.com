@@ -1,6 +1,9 @@
 const path = require('path')
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://tylerfunk.com`,
+  },
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-postcss",
