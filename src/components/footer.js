@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { SiArtstation,  SiInstagram, SiTwitch } from 'react-icons/si'
 import styled from 'styled-components'
 

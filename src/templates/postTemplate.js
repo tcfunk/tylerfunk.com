@@ -46,12 +46,12 @@ export default function Template({
   const { markdownRemark } = data
   const { html, frontmatter } = markdownRemark
 
-  var artstationEmbed = "";
-  if (frontmatter.artstationId) {
-    artstationEmbed = (
-      <iframe title="Marmoset Viewer" style={{width: "100%"}} src={"https://www.artstation.com/embed/"+ frontmatter.artstationId} frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" scrolling="no"></iframe>
-    )
-  }
+  // var artstationEmbed = "";
+  // if (frontmatter.artstationId) {
+  //   artstationEmbed = (
+  //     <iframe title="Marmoset Viewer" style={{width: "100%"}} src={"https://www.artstation.com/embed/"+ frontmatter.artstationId} frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" scrolling="no"></iframe>
+  //   )
+  // }
 
   return (
     <Layout>
@@ -88,19 +88,12 @@ query($slug: String!) {
       title
       description
       artstationId
-      coverImage {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       images {
         label
         src {
           childImageSharp {
-            fluid (quality: 100) {
-              ...GatsbyImageSharpFluid
+            fluid (maxWidth: 900, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

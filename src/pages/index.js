@@ -55,8 +55,8 @@ query {
         title
         coverImage {
           childImageSharp {
-            fluid (quality: 90) {
-              ...GatsbyImageSharpFluid
+            fluid (maxWidth: 400, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
