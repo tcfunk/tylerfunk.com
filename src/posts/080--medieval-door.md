@@ -13,4 +13,4 @@ images:
     label: "iRay render"
 ---
 
-Game-ready door model modeled and sculpted in Blender, textured in Substance Painter. Rendered with Toolbag.
+Game-ready door modeled and sculpted in Blender, textured in Substance Painter.
