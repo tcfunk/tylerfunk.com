@@ -92,7 +92,7 @@ query($slug: String!) {
         label
         src {
           childImageSharp {
-            fluid (maxWidth: 900, quality: 100) {
+            fluid (quality: 85) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
