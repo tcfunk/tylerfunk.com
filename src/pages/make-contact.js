@@ -11,6 +11,7 @@ const Container = styled.div.attrs({
     mx-auto
     py-4
     lg:py-8
+    space-y-6
   `
 })``
 
@@ -27,7 +28,9 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Container>
-        <Portrait fluid={me}></Portrait>
+        <h2 className="text-5xl font-serif text-gray-100">Let's collaborate</h2>
+        <p className="text-xl text-gray-100">tcfunk25@gmail.com</p>
+        {/* <Portrait fluid={me}></Portrait> */}
       </Container>
     </Layout>
   )
