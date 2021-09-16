@@ -88,6 +88,11 @@ query($slug: String!) {
       title
       description
       artstationId
+      videos {
+        src {
+          publicURL
+        }
+      }
       images {
         label
         src {

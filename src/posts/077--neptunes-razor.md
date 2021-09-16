@@ -1,0 +1,21 @@
+---
+title: Neptunes Razor - Stylized fantasy sword
+slug: neptunes-razor
+description: Stylized fantasy sword
+coverImage: ../images/neputnes_razor_signature_Viewport.jpg
+videos:
+  - src: ../images/shell_sword_video.webm
+images:
+  - src: ../images/shell_sword_Viewport_011.jpg
+    label: ""
+  - src: ../images/shell_sword_Viewport_008.jpg
+    label: ""
+  - src: ../images/shell_sword_Viewport_009.jpg
+    label: ""
+  - src: ../images/shell_sword_Viewport_010.jpg
+    label: ""
+  - src: ../images/shell_sword_Viewport_004.jpg
+    label: ""
+---
+
+Stylized fantasy sword with a nautical theme.
