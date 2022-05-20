@@ -1,5 +1,5 @@
 import React from "react"
-import { SiArtstation,  SiInstagram, SiTwitch } from 'react-icons/si'
+import { SiArtstation,  SiInstagram, SiItchDotIo, SiTwitch, SiTwitter } from 'react-icons/si'
 import styled from 'styled-components'
 
 
@@ -18,6 +18,13 @@ const SocialLink = styled.a.attrs({
   `
 })``
 
+const SocialLinkItch = styled(SocialLink).attrs({
+  className: `
+    hover:from-itch
+    hover:to-itch
+    hover:text-white
+  `
+})``
 const SocialLinkInstagram = styled(SocialLink).attrs({
   className: `
     hover:to-yellow-500
@@ -40,6 +47,13 @@ const SocialLinkTwitch = styled(SocialLink).attrs({
     hover:text-white
   `
 })``
+const SocialLinkTwitter = styled(SocialLink).attrs({
+  className: `
+    hover:from-twitter
+    hover:to-twitter
+    hover:text-white
+  `
+})``
 const SocialIcon = "h-6 w-6"
 
 
@@ -58,9 +72,13 @@ class Footer extends React.Component {
             <SiTwitch className={SocialIcon} />
           </SocialLinkTwitch>
 
-          <SocialLinkInstagram  href="https://www.instagram.com/tcfunk25/" target="_blank">
-            <SiInstagram className={SocialIcon} />
-          </SocialLinkInstagram>
+          <SocialLinkItch href="https://tfunk.itch.io" target="_blank">
+            <SiItchDotIo className={SocialIcon} />
+          </SocialLinkItch>
+
+          <SocialLinkTwitter  href="https://twitter.com/furtive_games" target="_blank">
+            <SiTwitter className={SocialIcon} />
+          </SocialLinkTwitter>
         </div>
 
       </footer>

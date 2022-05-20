@@ -109,7 +109,6 @@ class Template extends React.Component {
                 <MediaItem fluid={image.src.childImageSharp.fluid} />
               </div>
             )}
-            {/* {artstationEmbed} */}
           </MediaList>
         </Article>
       </Layout>

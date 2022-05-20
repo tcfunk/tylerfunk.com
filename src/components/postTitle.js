@@ -4,6 +4,7 @@ const PostTitle = styled.h1.attrs({
   className: `
     text-2xl
     font-serif
+    font-light
     text-gray-100
     mb-4
     md:text-3xl

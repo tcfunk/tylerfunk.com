@@ -3,8 +3,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'sans': ['Overpass'],
-      'serif': ['Permanent Marker']
+      'sans': ['Outfit'],
+      'serif': ['Outfit']
+      // 'sans': ['Overpass'],
+      // 'serif': ['Permanent Marker']
     },
     container: {
       padding: {

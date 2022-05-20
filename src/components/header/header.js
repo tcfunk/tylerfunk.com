@@ -39,7 +39,7 @@ const NavLink = styled(Link).attrs({
 &.navlink_active {
   ::after {
     content: "_";
-    font-family: Permanent Marker;
+    font-family: Outfit;
     font-size: 4rem;
     position: absolute;
     width: 100%;
@@ -72,7 +72,9 @@ const NameTitle = styled.h1.attrs({
     text-4xl
     md:text-6xl
     xl:text-7xl
+    font-light
     text-yellow-300
+    mb-4
   `
 })``
 const NameSubtitle = styled.h2.attrs({
@@ -81,6 +83,7 @@ const NameSubtitle = styled.h2.attrs({
     text-xl
     md:text-2xl
     xl:text-4xl
+    font-thin
     text-yellow-300
   `
 })``
