@@ -40,43 +40,82 @@ const MediaItem = styled(Img).attrs({
 })``
 
 
-export default function Template({
-  data
-}) {
-  const { markdownRemark } = data
-  const { html, frontmatter } = markdownRemark
 
-  // var artstationEmbed = "";
-  // if (frontmatter.artstationId) {
-  //   artstationEmbed = (
-  //     <iframe title="Marmoset Viewer" style={{width: "100%"}} src={"https://www.artstation.com/embed/"+ frontmatter.artstationId} frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" scrolling="no"></iframe>
-  //   )
-  // }
+class Template extends React.Component {
 
-  return (
-    <Layout>
-      <Helmet>
-        <title>{frontmatter.title}</title>
-        <meta name="description" contents={frontmatter.description}></meta>
-      </Helmet>
+  state = {
+    listWidth: 0,
+    listHeight: 0,
+  }
 
-      <Article>
-        <PostDetails
-          className="col-start-1 row-start-1 lg:col-start-3"
-          title={frontmatter.title}
-          description={html}></PostDetails>
+  constructor(props) {
+    super(props)
 
-        <MediaList>
-          {frontmatter.images.map((image) =>
-            <div>
-              <MediaItem fluid={image.src.childImageSharp.fluid} />
-            </div>
-          )}
-          {/* {artstationEmbed} */}
-        </MediaList>
-      </Article>
-    </Layout>
-  )
+    this.mviewer = undefined
+    this.mviewRef = React.createRef()
+    this.mediaListRef = React.createRef()
+    this.viewerFile = this.props.data.markdownRemark.frontmatter.viewerFile
+  }
+
+  updateDimensions = () => {
+    const width = this.mviewRef.current.offsetWidth
+
+    this.setState({
+      listWidth: width,
+      listHeight: width * 9 / 16
+    })
+
+    this.mviewer.resize(this.state.listWidth, this.state.listHeight)
+  }
+
+  componentDidMount() {
+    if (window.marmoset && this.viewerFile !== null) {
+      const width = this.mviewRef.current.offsetWidth 
+      const height = width * 9 / 16
+
+      this.mviewer = new window.marmoset.WebViewer(width, height, this.viewerFile)
+      this.mviewRef.current.appendChild(this.mviewer.domRoot)
+
+      window.addEventListener("resize", this.updateDimensions)
+    }
+
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions)
+  }
+
+  render() {
+    const { markdownRemark } = this.props.data
+    const { html, frontmatter } = markdownRemark
+
+    return (
+      <Layout>
+        <Helmet>
+          <title>{frontmatter.title}</title>
+          <meta name="description" contents={frontmatter.description}></meta>
+        </Helmet>
+
+        <Article>
+          <PostDetails
+            className="col-start-1 row-start-1 lg:col-start-3"
+            title={frontmatter.title}
+            description={html}></PostDetails>
+
+          <MediaList ref={ this.mediaListRef }>
+            <div className='mb-4' ref={ this.mviewRef }></div>
+            {frontmatter.images.map((image) =>
+              <div>
+                <MediaItem fluid={image.src.childImageSharp.fluid} />
+              </div>
+            )}
+            {/* {artstationEmbed} */}
+          </MediaList>
+        </Article>
+      </Layout>
+    )
+  }
+  
 }
 
 export const pageQuery = graphql`
@@ -88,6 +127,7 @@ query($slug: String!) {
       title
       description
       artstationId
+      viewerFile
       videos {
         src {
           publicURL
@@ -107,3 +147,5 @@ query($slug: String!) {
   }
 }
 `
+
+export default Template

@@ -3,6 +3,7 @@ title: Neptunes Razor - Stylized fantasy sword
 slug: neptunes-razor
 description: Stylized fantasy sword
 coverImage: ../images/neputnes_razor_signature_Viewport.jpg
+viewerFile: https://cdnb.artstation.com/p/assets/marmosets/attachments/041/407/587/original/neptunes_razor.mview?1631622475=
 videos:
   - src: ../images/shell_sword_video.webm
 images:
