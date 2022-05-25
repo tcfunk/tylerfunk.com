@@ -2,9 +2,9 @@
 title: Wendigo
 slug: wendigo
 description: Rigged, game-ready wendigo monster model
-coverImage: ../images/wendigo_viewport_square_Viewport.jpg
+coverImage: ../images/wendigo--signature.jpg
 images:
-  - src: ../images/wendigo_viewport_square_Viewport.jpg
+  - src: ../images/wendigo--signature.jpg
     label: "Toolbag render"
 ---
 
