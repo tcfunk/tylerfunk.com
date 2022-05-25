@@ -19,7 +19,6 @@ const NavList = styled.div.attrs({
 
 const NavLink = styled(Link).attrs({
   className: `
-    text-gray-100
     text-2xl
     px-4
     py-4
@@ -73,10 +72,11 @@ const NameTitle = styled.h1.attrs({
     md:text-6xl
     xl:text-7xl
     font-light
-    text-yellow-300
     mb-4
   `
 })``
+    // text-yellow-300
+
 const NameSubtitle = styled.h2.attrs({
   className: `
     font-serif
@@ -84,14 +84,14 @@ const NameSubtitle = styled.h2.attrs({
     md:text-2xl
     xl:text-4xl
     font-thin
-    text-yellow-300
   `
 })``
+    // text-yellow-300
 
 class Header extends React.Component {
   render() {
     return (
-      <header className="bg-gray-800">
+      <header>
         <div>
     
           <TitleWrapper>

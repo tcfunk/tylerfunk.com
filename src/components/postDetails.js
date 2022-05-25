@@ -14,7 +14,6 @@ const PostDetailsContentWrapper = styled.div.attrs({
   className: `
     container
     py-4
-    bg-gray-700
     lg:px-4
   `
 })``

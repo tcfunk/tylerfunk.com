@@ -5,8 +5,6 @@ export function onRenderBody (
 ) {
   setBodyAttributes({
     className: `
-      bg-gray-800
-      min-h-screen
     `
   })
   setHeadComponents([

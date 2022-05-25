@@ -61,7 +61,7 @@ const SocialIcon = "h-6 w-6"
 class Footer extends React.Component {
   render() {
     return (
-      <footer className="bg-gray-700 py-8">
+      <footer className="py-8">
 
         <div className="flex justify-center">
           <SocialLinkArtstation href="https://artstation.com/tcfunk/" target="_blank">
