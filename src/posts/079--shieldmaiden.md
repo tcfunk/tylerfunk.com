@@ -2,6 +2,7 @@
 title: Female robot
 slug: female-robot
 description: Rigged, game-ready female robot model
+published: true
 coverImage: ../images/female-robot.png
 images:
   - src: ../images/female-robot.png

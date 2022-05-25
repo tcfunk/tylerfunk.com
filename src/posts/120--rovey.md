@@ -2,6 +2,7 @@
 title: Rovey
 slug: rovey
 description: Rovey robot character
+published: true
 coverImage: ../images/rovey.jpg
 images:
   - src: ../images/rovey.jpg

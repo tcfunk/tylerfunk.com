@@ -46,8 +46,8 @@ const IndexPage = ({ data }) => {
 }
 
 export const query = graphql`
-query {
-  allMarkdownRemark (sort: {fields: fileAbsolutePath}) {
+query MyQuery {
+  allMarkdownRemark(filter: {frontmatter: {published: {eq: true}}, excerpt: {}}) {
     nodes {
       excerpt
       frontmatter {
@@ -55,7 +55,7 @@ query {
         title
         coverImage {
           childImageSharp {
-            fluid (maxWidth: 400, quality: 90) {
+            fluid(maxWidth: 400, quality: 90) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

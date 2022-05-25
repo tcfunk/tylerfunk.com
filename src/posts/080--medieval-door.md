@@ -2,6 +2,7 @@
 title: Medieval Door
 slug: medieval-door
 description: Game-ready door and frame asset.
+published: true
 coverImage: ../images/medievaldoor--signature.jpg
 artstationId: 33495143
 images:
