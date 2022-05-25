@@ -5,7 +5,6 @@ import PostTitle from './postTitle'
 
 const PostDescription = styled.div.attrs({
   className: `
-    text-gray-100
     font-lg
   `
 })``
