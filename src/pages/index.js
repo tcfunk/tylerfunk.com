@@ -47,7 +47,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
 query MyQuery {
-  allMarkdownRemark(filter: {frontmatter: {published: {eq: true}}, excerpt: {}}) {
+  allMarkdownRemark(sort: {fields: fileAbsolutePath}, filter: {frontmatter: {published: {eq: true}}, excerpt: {}}) {
     nodes {
       excerpt
       frontmatter {
