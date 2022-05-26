@@ -29,7 +29,7 @@ const NavLink = styled(Link).attrs({
   activeClassName: 'navlink_active'
 })`
 &:hover::after {
-  color: rgba(243, 244, 246, 1);
+  color: rgb(79, 70, 229, 1);
 }
 &.navlink_active::after {
   color: rgba(252, 211, 77, 1);
@@ -73,9 +73,9 @@ const NameTitle = styled.h1.attrs({
     xl:text-7xl
     font-light
     mb-4
+    text-zinc-600
   `
 })``
-    // text-yellow-300
 
 const NameSubtitle = styled.h2.attrs({
   className: `
@@ -86,7 +86,6 @@ const NameSubtitle = styled.h2.attrs({
     font-thin
   `
 })``
-    // text-yellow-300
 
 class Header extends React.Component {
   render() {
@@ -104,8 +103,8 @@ class Header extends React.Component {
           <NavWrapper>
             <NavList>
               <NavLink to="/">Home</NavLink>
-              {/* <NavLink to="/about">About</NavLink> */}
-              {/* <NavLink to="/make-contact">Contact</NavLink> */}
+              {/* <NavLink to="/about">About</NavLink>
+              <NavLink to="/make-contact">Contact</NavLink> */}
             </NavList>
           </NavWrapper>
 
