@@ -2,7 +2,7 @@
 title: Rovey Lander
 slug: rovey-lander
 description: Rovey lander rocket model
-published: true
+published: false
 coverImage: ../images/rovey_lander.jpg
 images:
   - src: ../images/rovey_lander.jpg
