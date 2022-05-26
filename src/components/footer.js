@@ -1,5 +1,5 @@
 import React from "react"
-import { SiArtstation,  SiInstagram, SiItchDotIo, SiTwitch, SiTwitter } from 'react-icons/si'
+import { SiArtstation, SiTwitch, SiTwitter, SiItchdotio } from 'react-icons/si'
 import styled from 'styled-components'
 
 
@@ -73,7 +73,7 @@ class Footer extends React.Component {
           </SocialLinkTwitch>
 
           <SocialLinkItch href="https://tfunk.itch.io" target="_blank">
-            <SiItchDotIo className={SocialIcon} />
+            <SiItchdotio className={SocialIcon} />
           </SocialLinkItch>
 
           <SocialLinkTwitter  href="https://twitter.com/furtive_games" target="_blank">
@@ -87,4 +87,3 @@ class Footer extends React.Component {
 }
 
 export default Footer
-

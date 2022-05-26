@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import PostDetails from '../components/postDetails'
 import Layout from '../layouts/layout'
@@ -33,7 +33,7 @@ const MediaList = styled.div.attrs({
   `
 })``
 
-const MediaItem = styled(Img).attrs({
+const MediaItem = styled(GatsbyImage).attrs({
   className: `
     mb-4
   `
@@ -106,7 +106,7 @@ class Template extends React.Component {
             <div className='mb-4' ref={ this.mviewRef }></div>
             {frontmatter.images.map((image) =>
               <div>
-                <MediaItem fluid={image.src.childImageSharp.fluid} />
+                <MediaItem image={image.src.childImageSharp.gatsbyImageData} />
               </div>
             )}
           </MediaList>
@@ -136,9 +136,7 @@ query($slug: String!) {
         label
         src {
           childImageSharp {
-            fluid (quality: 85) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }

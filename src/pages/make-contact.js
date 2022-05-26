@@ -1,5 +1,6 @@
 import * as React from "react"
-import Img from "gatsby-image"
+import { graphql } from 'gatsby'
+import { GatsbyImage } from "gatsby-plugin-image"
 import styled from 'styled-components'
 
 import Layout from '../layouts/layout'
@@ -15,7 +16,7 @@ const Container = styled.div.attrs({
   `
 })``
 
-const Portrait = styled(Img).attrs({
+const Portrait = styled(GatsbyImage).attrs({
   className: `
     rounded-full
     w-64
@@ -28,9 +29,9 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Container>
-        <h2 className="text-5xl font-serif text-gray-100">Let's collaborate</h2>
-        <p className="text-xl text-gray-100">tcfunk25@gmail.com</p>
-        {/* <Portrait fluid={me}></Portrait> */}
+        <h2 className="text-5xl font-serif">Let's collaborate</h2>
+        <p className="text-xl">tcfunk25@gmail.com</p>
+        <Portrait image={me}></Portrait>
       </Container>
     </Layout>
   )
@@ -40,9 +41,7 @@ export const query = graphql`
 query {
   file(relativePath: {eq: "me.png"}) {
     childImageSharp {
-      fluid {
-        ...GatsbyImageSharpFluid_withWebp
-      }
+      gatsbyImageData(layout: FIXED)
     }
   }
 }

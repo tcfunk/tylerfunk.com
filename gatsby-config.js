@@ -3,14 +3,11 @@ const path = require('path')
 module.exports = {
   siteMetadata: {
     siteUrl: `https://tylerfunk.com`,
+    title: "Tyler Funk"
   },
   plugins: [
-    "gatsby-plugin-sass",
-    "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-plugin-styled-components",
     "gatsby-transformer-sharp",
@@ -39,12 +36,13 @@ module.exports = {
       __key: "pages",
     },
     "gatsby-transformer-remark",
-    {
-      resolve: "gatsby-plugin-purgecss",
-      options: {
-        printRejected: true,
-        tailwind: true,
-      }
-    }
+    // {
+    //   resolve: "gatsby-plugin-purgecss",
+    //   options: {
+    //     printRejected: true,
+    //     tailwind: true,
+    //   }
+    // },
+    "gatsby-plugin-postcss"
   ],
 };

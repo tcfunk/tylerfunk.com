@@ -37,7 +37,9 @@ const IndexPage = ({ data }) => {
               to={node.frontmatter.slug}
               title={node.frontmatter.title}
               description={node.excerpt}
-              image={node.frontmatter.coverImage.childImageSharp.fluid} />
+              image={node.frontmatter.coverImage.childImageSharp.gatsbyImageData}
+              key={node.frontmatter.slug}
+              />
           )}
         </PortfolioGrid>
       </main>
@@ -55,9 +57,7 @@ query MyQuery {
         title
         coverImage {
           childImageSharp {
-            fluid(maxWidth: 400, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData(layout: CONSTRAINED, width: 400, webpOptions: {quality: 90})
           }
         }
       }

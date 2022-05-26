@@ -8,6 +8,6 @@ export function onRenderBody (
     `
   })
   setHeadComponents([
-    <script async="true" src="https://viewer.marmoset.co/main/marmoset.js" />
+    <script async={true} src="https://viewer.marmoset.co/main/marmoset.js" />
   ])
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby";
 import styled from 'styled-components'
 
@@ -12,7 +12,7 @@ const Post = styled(Link).attrs({
   `
 })``
 
-const PostImage = styled(Img).attrs({
+const PostImage = styled(GatsbyImage).attrs({
   className: `
     duration-100
     transform
@@ -26,7 +26,7 @@ class GridItem extends React.Component {
   render() {
     return (
       <Post to={this.props.to}>
-        <PostImage fluid={this.props.image} />
+        <PostImage image={this.props.image} />
       </Post>
     )
   }

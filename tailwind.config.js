@@ -1,13 +1,13 @@
 module.exports = {
   content: [
-    './src/**/*.{js,jsx,ts,tsx,vue}',
+    './public/**/*.html',
+    './src/**/*.{js,jsx,ts,tsx}',
   ],
+  darkMode: false,
   theme: {
     fontFamily: {
       'sans': ['Outfit'],
       'serif': ['Outfit']
-      // 'sans': ['Overpass'],
-      // 'serif': ['Permanent Marker']
     },
     container: {
       padding: {
