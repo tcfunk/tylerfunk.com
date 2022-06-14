@@ -19,6 +19,9 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       boxShadow: {
         neumorph: '20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;'
       },

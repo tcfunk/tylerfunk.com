@@ -9,6 +9,10 @@ const Post = styled(Link).attrs({
     block
     rounded
     truncate
+    hover:bg-gradient-radial
+    from-indigo-400/50
+    via-tsbg
+    to-tsbg
   `
 })``
 
