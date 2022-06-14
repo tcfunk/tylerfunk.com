@@ -3,10 +3,10 @@ title: Wendigo
 slug: wendigo
 description: Rigged, game-ready wendigo monster model
 published: true
-coverImage: ../images/wendigo--signature.jpg
+coverImage: ../images/wendigo--signature--alpha.png
 images:
-  - src: ../images/wendigo--signature.jpg
-    label: "Toolbag render"
+  - src: ../images/wendigo--signature--alpha.png
+    label: ""
 ---
 
 Wendigo model I created for a community game called [Mysteries of Clark's Magic Academy](https://chaoticplay.itch.io/clarks-magic-academy). Sculpted in ZBrush, retopologized and rigged in Blender, and textured in Marmoset Toolbag.
