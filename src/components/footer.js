@@ -10,19 +10,20 @@ const SocialLink = styled.a.attrs({
     p-2
     my-0
     mx-4
-    bg-gradient-to-tr
-    from-gray-700
-    via-gray-700
-    to-gray-700
-    text-gray-100
+    text-stone-700
   `
 })``
+    // bg-gradient-to-tr
+    // from-gray-700
+    // via-gray-700
+    // to-gray-700
+    // text-gray-100
 
 const SocialLinkItch = styled(SocialLink).attrs({
   className: `
     hover:from-itch
     hover:to-itch
-    hover:text-white
+    hover:text-itch
   `
 })``
 const SocialLinkInstagram = styled(SocialLink).attrs({
@@ -30,7 +31,7 @@ const SocialLinkInstagram = styled(SocialLink).attrs({
     hover:to-yellow-500
     hover:from-purple-500
     hover:via-pink-500
-    hover:text-white
+    hover:text-pink-500
   `
 })``
 const SocialLinkArtstation = styled(SocialLink).attrs({
@@ -44,17 +45,17 @@ const SocialLinkTwitch = styled(SocialLink).attrs({
   className: `
     hover:from-twitch
     hover:to-twitch
-    hover:text-white
+    hover:text-twitch
   `
 })``
 const SocialLinkTwitter = styled(SocialLink).attrs({
   className: `
     hover:from-twitter
     hover:to-twitter
-    hover:text-white
+    hover:text-twitter
   `
 })``
-const SocialIcon = "h-6 w-6"
+const SocialIcon = "h-8 w-8"
 
 
 
