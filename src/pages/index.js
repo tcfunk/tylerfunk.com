@@ -17,9 +17,8 @@ const PortfolioGrid = styled.div.attrs({
     py-8
     lg:py-10
     lg:gap-10
-    sm:grid-cols-2
-    md:grid-cols-3
-    xl:grid-cols-4
+    md:grid-cols-2
+    xl:grid-cols-3
   `
 })``
 
