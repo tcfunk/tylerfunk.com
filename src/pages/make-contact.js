@@ -2,6 +2,7 @@ import * as React from "react"
 import { graphql } from 'gatsby'
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from 'styled-components'
+import { FaEnvelope } from 'react-icons/fa'
 
 import Layout from '../layouts/layout'
 
@@ -13,6 +14,9 @@ const Container = styled.div.attrs({
     py-4
     lg:py-8
     space-y-6
+    items-center
+    flex
+    flex-col
   `
 })``
 
@@ -29,8 +33,11 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Container>
-        <h2 className="text-5xl font-serif">Let's collaborate</h2>
-        <p className="text-xl">tcfunk25@gmail.com</p>
+        <h2 className="text-5xl font-serif text-center">Looking for some jolly cooperation?</h2>
+        <p className="text-2xl flex items-center space-x-4">
+          <FaEnvelope />
+          <span>tyler@furtivegames.com</span>
+        </p>
         <Portrait image={me}></Portrait>
       </Container>
     </Layout>
