@@ -8,6 +8,7 @@ export function onRenderBody (
     `
   })
   setHeadComponents([
-    <script async={true} src="https://viewer.marmoset.co/main/marmoset.js" />
+    <script async={true} src="https://viewer.marmoset.co/main/marmoset.js" key={"marmoset_viewer"} />,
+    <script data-goatcounter="https://tcfunk.goatcounter.com/count" async src="//gc.zgo.at/count.js" key="goatcounter" />
   ])
 }
