@@ -96,7 +96,7 @@ class Header extends React.Component {
           <TitleWrapper>
             <TitleContainer>
               <NameTitle>Tyler Funk</NameTitle>
-              <NameSubtitle>Game Developer / 3D Artist</NameSubtitle>
+              <NameSubtitle>3D Art Portfolio</NameSubtitle>
             </TitleContainer>
           </TitleWrapper>
 
