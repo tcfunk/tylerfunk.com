@@ -11,7 +11,7 @@ images:
     label: ""
 ---
 
-Low-fi character model I made for [Edens Sky Tower](https://simonhoffiz.itch.io/edens-sky-tower).
+Low-fi character model I made for [Edens Sky Tower](https://simonhoffiz.itch.io/edens-sky-tower) in the style of characters from Sky Children of Light.
 
 <br>
 
