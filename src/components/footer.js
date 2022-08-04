@@ -1,5 +1,5 @@
 import React from "react"
-import { SiArtstation, SiTwitch, SiTwitter, SiItchdotio } from 'react-icons/si'
+import { SiArtstation, SiTwitch, SiTwitter, SiItchdotio, SiLinkedin } from 'react-icons/si'
 import styled from 'styled-components'
 
 
@@ -48,6 +48,15 @@ const SocialLinkTwitch = styled(SocialLink).attrs({
     hover:text-twitch
   `
 })``
+
+const SocialLinkLinkedin = styled(SocialLink).attrs({
+  className: `
+  hover:to-sky-600
+  hover:from-gray-900
+  hover:text-sky-600
+  `
+})``
+
 const SocialLinkTwitter = styled(SocialLink).attrs({
   className: `
     hover:from-twitter
@@ -68,6 +77,10 @@ class Footer extends React.Component {
           <SocialLinkArtstation href="https://artstation.com/tcfunk/" target="_blank">
             <SiArtstation className={SocialIcon} />
           </SocialLinkArtstation>
+
+          <SocialLinkLinkedin href="https://linkedin.com/in/tyler-c-funk" target="_blank">
+            <SiLinkedin className={SocialIcon} />
+          </SocialLinkLinkedin>
 
           <SocialLinkTwitch href="https://twitch.com/tyfoo/" target="_blank">
             <SiTwitch className={SocialIcon} />
