@@ -1,6 +1,7 @@
 ---
 title: Runar Battle Axe
 slug: runar-battle-axe
+type: model
 description: Stylized, game-ready axe.
 published: true
 coverImage: ../images/axe--signature--alpha.png

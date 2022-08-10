@@ -1,6 +1,7 @@
 ---
 title: Wendigo
 slug: wendigo
+type: model
 description: Rigged, game-ready wendigo monster model
 published: true
 coverImage: ../images/wendigo--signature--alpha.png

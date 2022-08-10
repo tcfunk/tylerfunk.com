@@ -1,6 +1,7 @@
 ---
 title: Camera
 slug: camera
+type: model
 description: High-poly camera sort of based off the FujiFilm X100V.
 published: false
 coverImage: ../images/camera--square.png

@@ -1,6 +1,7 @@
 ---
 title: Hippo Warrior
 slug: hippo-warrior
+type: model
 description: Stylized fantasy sword
 published: true
 coverImage: ../images/hippo-warrior--signature_Viewport.png

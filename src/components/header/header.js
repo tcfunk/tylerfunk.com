@@ -7,6 +7,10 @@ const NavWrapper = styled.section.attrs({
   className: `
     container
     mx-auto
+    flex
+    justify-between
+    items-center
+    flex-row
   `
 })``
 
@@ -90,26 +94,18 @@ const NameSubtitle = styled.h2.attrs({
 class Header extends React.Component {
   render() {
     return (
-      <header>
-        <div>
-    
+        <NavWrapper>
           <TitleWrapper>
-            <TitleContainer>
-              <NameTitle>Tyler Funk</NameTitle>
-              <NameSubtitle>3D Art Portfolio</NameSubtitle>
-            </TitleContainer>
+            <NameTitle>Tyler Funk</NameTitle>
+            {/* <NameSubtitle>Games Portfolio</NameSubtitle> */}
           </TitleWrapper>
 
-          <NavWrapper>
-            <NavList>
-              <NavLink to="/">Home</NavLink>
-              {/* <NavLink to="/about">About</NavLink> */}
-              <NavLink to="/make-contact">Contact</NavLink>
-            </NavList>
-          </NavWrapper>
-
-        </div>
-      </header>
+          <NavList>
+            <NavLink to="/">Home</NavLink>
+            {/* <NavLink to="/about">About</NavLink> */}
+            <NavLink to="/make-contact">Contact</NavLink>
+          </NavList>
+        </NavWrapper>
     )
   }
 }

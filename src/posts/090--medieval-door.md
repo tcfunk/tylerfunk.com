@@ -1,6 +1,7 @@
 ---
 title: Medieval Door
 slug: medieval-door
+type: model
 description: Game-ready door and frame asset.
 published: false
 coverImage: ../images/medievaldoor--signature.jpg

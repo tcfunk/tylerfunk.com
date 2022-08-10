@@ -1,6 +1,7 @@
 ---
 title: Amanu
 slug: amanu
+type: model
 description: Character model for Eden's Sky Tower
 published: true
 coverImage: ../images/amanu--signature--alpha.png

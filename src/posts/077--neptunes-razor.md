@@ -1,6 +1,7 @@
 ---
 title: Neptunes Razor - Stylized fantasy sword
 slug: neptunes-razor
+type: model
 description: Stylized fantasy sword
 published: true
 coverImage: ../images/razor--signature--viewport.png

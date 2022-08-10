@@ -1,6 +1,7 @@
 ---
 title: Eden Deer
 slug: eden-deer
+type: model
 description: Fantasy deer creature
 published: true
 coverImage: ../images/deer--signature--alpha.png

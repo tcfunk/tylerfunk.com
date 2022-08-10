@@ -1,6 +1,7 @@
 ---
 title: Spear
 slug: spear
+type: model
 description: Low-poly spear modeled, textured, and rendered in blender.
 published: false
 coverImage: ../images/spear.png

@@ -1,6 +1,7 @@
 ---
 title: Rovey
 slug: rovey
+type: model
 description: Rovey robot character
 published: false
 coverImage: ../images/rovey.jpg
