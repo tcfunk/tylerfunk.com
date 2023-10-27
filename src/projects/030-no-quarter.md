@@ -6,6 +6,9 @@ published: true
 description: Single player arena shooter with stackable weapon modifications. Made in Unity URP.
 coverImage: ../images/no-quarter-screenshot-2.png
 itchLink: https://tfunk.itch.io/no-quarter
+images:
+  - src: ../images/no-quarter-screenshot-2.png
+    label: ""
 ---
 
 Some more descriptive text about No Quarter.
